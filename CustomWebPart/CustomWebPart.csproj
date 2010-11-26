@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A46B23E3-433D-4536-9EF4-3C4C5659E8D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomWebPart</RootNamespace>
+    <AssemblyName>CustomWebPart</AssemblyName>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CustomWebPart.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>GAC\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>GAC\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\GenericHandlers\GetSampleGridContent.ashx.cs" />
+    <Compile Include="Code\Helpers\CustomerData.cs" />
+    <Compile Include="Code\Helpers\SPObjectModelHelper.cs" />
+    <Compile Include="Code\UserControls\DetailsView.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\WebParts\SampleJQueryWebPart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GAC\" />
+    <Folder Include="SharePointRoot\TEMPLATE\FEATURES\" />
+    <Folder Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomWebPart.snk" />
+    <Content Include="Manifest.Config" />
+    <Content Include="SharePointRoot\TEMPLATE\ControlTemplates\JQWebPart\DetailsView.ascx" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\jquery-1.4.2.min.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\jquery-ui-1.8.5.custom.min.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\OrdersHistoryDetail.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\css\ellipsis-xbl.xml" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\css\ui.jqgrid.css" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-bg.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-bg1251.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-cat.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-cn.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-cs.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-da.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-de.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-el.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-en.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-es.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-fa.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-fi.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-fr.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-gl.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-he.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-hu.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-is.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-it.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-ja.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-nl.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-no.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-pl.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-pt.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-ro.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-ru.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-sk.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-sv.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-tr.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\i18n\grid.locale-ua.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\jquery-1.4.2.min.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\plugins\jqGrid\js\jquery.jqGrid.min.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\scripts\SampleWebPart.js" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\styles\jquery-ui-1.8.5.custom.css" />
+    <Content Include="solutionid.txt" />
+    <Content Include="web.config" />
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="SharePointRoot\TEMPLATE\LAYOUTS\JQWebPart\GetSampleGridContent.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62190</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
