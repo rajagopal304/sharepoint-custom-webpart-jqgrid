@@ -1,0 +1,3 @@
+Based on WSPBuilder template for VS2010, the solution contains custom web part implemented with jqGrid and jquery. The web part supports paging, filtering, sorting and a modal pop-up of a user control (ascx), which content is dynamically generated on the server side, depending on the selected item from the web part. The web part is fed by the content of SPList.
+
+You can review http://kbochevski.blogspot.com/2010/11/sharepoint-2010-custom-web-part-with.html which explains the process of implementation.
